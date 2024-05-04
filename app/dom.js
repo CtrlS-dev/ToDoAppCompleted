@@ -12,10 +12,10 @@ let inputFormValidation = false;
 
 //Funciones
 const validateInput = () =>{
-    if (inputFormValidation) {
-        btnForm.disabled = false;
-      } else {
+    if (!inputFormValidation) {
         btnForm.disabled = true;
+      } else {
+        btnForm.disabled = false;
       }
 }
 
@@ -118,12 +118,12 @@ const renderCounters = () => {
 
   const completadas = document.querySelectorAll('.text-box-checked').length;
   completedTasks.innerHTML = `
-  Completas: ${completadas}
+  Checked: ${completadas}
   `;
 
   const incompletas = total - completadas;
   uncompletedTasks.innerHTML = `
-  Incompletas: ${incompletas}
+  Incomplete: ${incompletas}
   `;
 
 }
