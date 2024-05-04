@@ -14,12 +14,13 @@ body {
   font-weight: 400;
   font-style: normal;
   background-color: #172554;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  overflow-y: hidden;
+  overflow-x: hidden;
+  height: 100vh;
 }
 
 /* Margin 0 */
@@ -95,12 +96,21 @@ body, h1, li, p, form, ul, h3{
   text-decoration: underline;
 }
 
+.another-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 50%;
+  right: 50%;
+  top: 10rem;
+}
 /* Title */
 .title{
   display: flex;
   justify-content: center;
   margin: 0.3rem;
-  margin-top: 3rem;
   padding: 6px;
   font-size: 4rem;
   color: white;
@@ -112,10 +122,10 @@ body, h1, li, p, form, ul, h3{
 }
 /* Container */
 .container{
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  max-width: 300px;
+  justify-content: space-between; */
+  width: 300px;
   margin: 0.4rem;
   padding: 6px;
   background-color: #1e3a8a;
@@ -124,12 +134,12 @@ body, h1, li, p, form, ul, h3{
 
 .div-container{
   margin: 0rem;
-  padding: 2px;
+  padding: 0px;
 }
 
 /* Form */
 #form{
-  margin: 0.1rem;
+  margin: 0.2rem;
   padding: 0.1rem;
   display: flex;
   flex-direction: row;
@@ -179,16 +189,15 @@ body, h1, li, p, form, ul, h3{
 
 /* List background */
 .list{
-  margin: 0rem;
-  height: 20rem;
-  width: 12rem;
-  padding: 8px;
-  max-height: 15rem;
+  margin: 0.1rem;
+  max-height: 20rem;
+  /* max-width: 19rem; */
+  /* padding: 8px; */
   list-style: none;
   padding: 0rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: ; */
   overflow-y: auto;
   overflow-x: hidden;
   cursor: default;
@@ -321,7 +330,12 @@ body, h1, li, p, form, ul, h3{
 }
 
 #box-total{
-  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.8rem;
+  height: 3rem;
+  padding: 3px;
   border-radius: 5px;
   background-color: #68106b;
   color: white;
@@ -340,6 +354,11 @@ body, h1, li, p, form, ul, h3{
 }
   
 #box-completed{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 3rem;
   padding: 8px;
   border-radius: 5px;
   background-color: #106b32;
@@ -347,7 +366,12 @@ body, h1, li, p, form, ul, h3{
 }
 
 #box-incompleted{
-  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  height: 3rem;
+  padding: 3px;
   border-radius: 5px;
   background-color: #b91c1c;
   color: white;
@@ -355,8 +379,28 @@ body, h1, li, p, form, ul, h3{
 
 /* Medias */
 @media (min-width: 768px){
+
   .title{
     font-size: 4.5rem;
+  }
+
+  .container{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+    width: 39rem;
+    margin: 0.4rem;
+    padding: 6px;
+    background-color: #1e3a8a;
+    border-radius: 24px;
+  }
+
+  .another-div{
+    top: 6.8rem;
+  }
+
+  .list{
+    max-height: 22rem;
   }
 
   #nav-links-container{
@@ -370,25 +414,16 @@ body, h1, li, p, form, ul, h3{
 
 @media (min-width: 1024px) {
   .title {
-    font-size: 7.7rem;
-  }
-  .equal-box{
-    margin-top: 2rem;
-    font-size: 20px;
+    font-size: 4.7rem;
   }
 }
 
 @media (min-width: 2560px) {
-  .title{
-    font-size: 9rem;
+  .another-div{
+    top: 8.8rem;
   }
 
-  .ul-list{
-    max-height: 45rem;
-    font-size: 26px;
-  }
-  .equal-box{
-    margin-top: 2rem;
-    font-size: 32px;
+  .list{
+    max-height: 62rem;
   }
 }
