@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAV -->
+    <nav id="nav">
+    <!-- NAV CONTAINER -->
+        <div id="nav-container">
+    <!-- NAV TITLE -->
+          <a href="/index.html" id="nav-title">TodoApp</a>
+    <!-- NAV BTN -->
+          <button id="nav-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+          <div id="nav-links-container">
+            <a class="link" href="/index.html">Home</a>
+          </div>
+        </div>
+      </nav>
+    <!-- TITLE TODOAPP -->
+            <h1 class="title">Todo<span id="title-span">App</span></h1>
+    <!-- CONTAINER -->
+    <main class="container">
+    <!-- BOX DIV CONTAINER -->
+        <div class="div-container">
+    <!-- FORM INPUT BOX -->
+             <form id="form">
+                <input type="text" name="items" id="input-items" placeholder="Add your items here...">
+                <button id="btn-add">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="btn-list"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+                </button>
+            </form>
+    <!-- Error input -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+            <!-- <div id="error-div">
+                <h4 id="error">a task must be provided...</h4>
+            </div> -->
+    <!-- LIST -->
+            <div class="list">
+                <ul class="ul-list">
+                    <!-- <li class="item item-checked">
+                        <button class="btn-delete">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
+                        </button>
+                        <p class="text-box text-box-checked">Terminar tarea de curso</p>
+                        <button class="btn-checked">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                        </button>
+                    </li>
+                    <li class="item">
+                        <button class="btn-delete">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
+                        </button>
+                        <p class="text-box">Terminar de cocinar cena</p>
+                        <button class="btn-check">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                        </button>
+                    </li>
+                    <li class="item">
+                        <button class="btn-delete">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
+                        </button>
+                        <p class="text-box">Terminar de cocinar desayuno</p>
+                        <button class="btn-check">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                        </button>
+                    </li>
+                    <li class="item">
+                        <button class="btn-delete">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
+                        </button>
+                        <p class="text-box">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, unde. Vero, velit nobis debitis veritatis, officia ea totam placeat perspiciatis inventore minima laborum porro consectetur, deserunt nulla! Excepturi, vitae a.</p>
+                        <button class="btn-check">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                        </button>
+                    </li>
+                    <li class="item item-checked">
+                        <button class="btn-delete">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
+                        </button>
+                        <p class="text-box text-box-checked">Lavar ropa</p>
+                        <button class="btn-check btn-checked">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                        </button>
+                    </li>
+                    <li class="item item-checked">
+                        <button class="btn-delete">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
+                        </button>
+                        <p class="text-box text-box-checked">Limpiar mesa</p>
+                        <button class="btn-check btn-checked">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                        </button>
+                    </li>
+                    <li class="item">
+                        <button class="btn-delete">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
+                        </button>
+                        <p class="text-box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla maxime incidunt aliquid ratione iusto neque similique nostrum distinctio numquam impedit consectetur, illo, reprehenderit ad, consequatur in perspiciatis quia debitis corrupti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis laboriosam id quas voluptates, sapiente voluptatibus sed eos facilis officia perspiciatis pariatur cupiditate deserunt, recusandae fugit amet aliquid nostrum possimus. Obcaecati! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, unde. Vero, velit nobis debitis veritatis, officia ea totam placeat perspiciatis inventore minima laborum porro consectetur, deserunt nulla! Excepturi, vitae a.</p>
+                        <button class="btn-check">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                        </button>
+                    </li>
+                    <li class="item">
+                        <button class="btn-delete">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
+                        </button>
+                        <p class="text-box">Subir actividad a GitHub</p>
+                        <button class="btn-check">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                        </button>
+                    </li>
+                    <li class="item item-checked">
+                        <button class="btn-delete">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
+                        </button>
+                        <p class="text-box text-box-checked">Subir link a plataforma EdTecnica</p>
+                        <button class="btn-check btn-checked">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                        </button>
+                    </li>
+                    <li class="item">
+                        <button class="btn-delete">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
+                        </button>
+                        <p class="text-box">Comenzar Modulo 2</p>
+                        <button class="btn-check">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                        </button>
+                    </li>
+                    <li class="item">
+                        <button class="btn-delete">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
+                        </button>
+                        <p class="text-box">Practicar replicando diseño de paginas</p>
+                        <button class="btn-check">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                        </button>
+                    </li>
+                    <li class="item">
+                        <button class="btn-delete">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
+                        </button>
+                        <p class="text-box">Mejorar lectura de codigos</p>
+                        <button class="btn-check">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+                        </button>
+                    </li>                     -->
+                </ul>
+            </div>
+        </div>
+    </main>
+    <!-- EQUALS BOXES -->
+    <div class="equal-box">
+        <p id="box-total">Total: <span id="total-items">18</span></p>
+        <p id="box-completed">Completed: <span id="completed-items">8</span></p>
+        <p id="box-incompleted">Incompleted: <span id="incompleted-items">10</span></p>             
+    </div>
+    <script src="dom.js"></script>      
+</body>
+</html>
