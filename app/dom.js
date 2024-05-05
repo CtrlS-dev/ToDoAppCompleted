@@ -6,15 +6,18 @@ const totalTasks = document.querySelector('#box-total');
 const completedTasks = document.querySelector('#box-completed');
 const uncompletedTasks = document.querySelector('#box-incompleted');
 const INPUT_REGEX = /^[\S ]+[\S]$/;
-const error = document.querySelector('#error')
+let error = document.querySelector('#error');
 //Validacion
 let inputFormValidation = false;
+error = false;
 
 //Funciones
 const validateInput = () =>{
     if (!inputFormValidation) {
+      error.hidden = false;
         btnForm.disabled = true;
       } else {
+        error.hidden = true;
         btnForm.disabled = false;
       }
 }
@@ -28,15 +31,13 @@ const renderTasks = () =>{
     if(task.checked){
       li.classList.add('text-box-checked');
       li.classList.add('item-checked');
-      // li.classList.add('btn-checked');
-      // li.classList.remove('btn-check');
     }
     li.id = task.id;
     li.innerHTML = `
     <button class="btn-delete">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
     </button>
-    <p>${task.task}</p>
+    <p class="parrafo1">${task.task}</p>
     <button class="btn-check">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
     </button>
@@ -58,8 +59,21 @@ inputForm.addEventListener('input', e =>{
 form.addEventListener('submit', e => {
     e.preventDefault();
   // Verificar si las validaciones son verdaderas
-  if (!inputFormValidation) {
-    console.log(error);
+  const divError = document.querySelector('#error-div');
+  // if (inputFormValidation){
+  //   divError.innerHTML = `
+  //   <div id="error-div">
+  //   </div>
+  //     `;
+  //   }
+    if (!inputFormValidation) {
+      // divError.innerHTML = `
+      // <div id="error-div">
+      // <h4 id="error">a task must be provided...</h4>
+      // </div>
+      // `;
+      alert('Recuerda que no debes dejar espacios al final y debes escribir más de una letra')
+      return;
   }
   // Crear contacto
   const newTask = {
