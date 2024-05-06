@@ -5,23 +5,13 @@ const listForm = document.querySelector('.list');
 const totalTasks = document.querySelector('#box-total');
 const completedTasks = document.querySelector('#box-completed');
 const uncompletedTasks = document.querySelector('#box-incompleted');
-const INPUT_REGEX = /^[\S ]+[\S]$/;
-let error = document.querySelector('#error');
-//Validacion
+const INPUT_REGEX = /^(?!\s*$)(?!^.$).+$/;
+
+//Validaciones
 let inputFormValidation = false;
 error = false;
 
-//Funciones
-const validateInput = () =>{
-    if (!inputFormValidation) {
-      error.hidden = false;
-        btnForm.disabled = true;
-      } else {
-        error.hidden = true;
-        btnForm.disabled = false;
-      }
-}
-
+// Agregar ITEMS
 const renderTasks = () =>{
     listForm.innerHTML = '';
   tasks.forEach(task => {
@@ -48,47 +38,52 @@ const renderTasks = () =>{
   renderCounters();
 }
 
-//Data
 let tasks = [];
 
+// DATOS DE REGEX
 inputForm.addEventListener('input', e =>{
     inputFormValidation = INPUT_REGEX.test(inputForm.value);
-    validateInput(inputForm);
 });
 
 form.addEventListener('submit', e => {
-    e.preventDefault();
-  // Verificar si las validaciones son verdaderas
-  const divError = document.querySelector('#error-div');
-  // if (inputFormValidation){
-  //   divError.innerHTML = `
-  //   <div id="error-div">
-  //   </div>
-  //     `;
-  //   }
+  // ELIMINAR EVENTO POR DEFECTO  
+  e.preventDefault();
+
+// COMPROBAR VALOR INGRESADO EN INPUT 
+const divError = document.querySelector('#error-div');
+  if (inputForm.value === '') {
+    inputFormValidation = false;
+    btnForm.disabled = true;
+  }
     if (!inputFormValidation) {
-      // divError.innerHTML = `
-      // <div id="error-div">
-      // <h4 id="error">a task must be provided...</h4>
-      // </div>
-      // `;
-      alert('Recuerda que no debes dejar espacios al final y debes escribir más de una letra')
+      divError.innerHTML = `
+      <div id="error-div">
+      <h4 id="error">[ERROR]: debes escribir al menos más de una letra...</h4>
+      </div>
+      `;
       return;
   }
-  // Crear contacto
+  if (inputFormValidation) {
+    divError.innerHTML = `
+    <div id="error-div">
+    </div>
+    `;
+}
+// CREAR ITEM
   const newTask = {
     id: crypto.randomUUID(),
     task: inputForm.value,
     checked: false,
   }
-  // Agregar el contacto al array
+  // AGREGAR ITEM AL ARRAY
   tasks = tasks.concat(newTask);
-  // Guardar en el navegador
+  // GUARDAR EN EL NAVEGADOR
   localStorage.setItem('tasks', JSON.stringify(tasks));
   renderTasks ();
   form.reset();
   renderCounters();
 });
+
 
 listForm.addEventListener('click', e => {
   const deleteBtn = e.target.closest('.btn-delete');
@@ -122,8 +117,7 @@ listForm.addEventListener('click', e => {
   } 
 });
 
-// Contadores
-
+// COUNTADORES
 const renderCounters = () => {
   const total = tasks.length;
   totalTasks.innerHTML = `
