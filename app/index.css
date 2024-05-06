@@ -164,6 +164,9 @@ body, h1, li, p, form, ul, h3{
   border-radius: 15px;
   font-style: italic;
 }
+.parrafo1{
+  margin: 2px;
+}
 /* Btn add to box input */
 #btn-add{
   background-color: #16a34a;
@@ -379,6 +382,21 @@ body, h1, li, p, form, ul, h3{
 
 /* Medias */
 @media (min-width: 768px){
+
+  #box-completed{
+    width: 8rem;
+    height: 3rem;
+  }
+  
+  #box-incompleted{
+    width: 9rem;
+    height: 3rem;
+  }
+
+  #box-total{
+    width: 6rem;
+    height: 3rem;
+  }
 
   .title{
     font-size: 4.5rem;
