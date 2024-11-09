@@ -10,7 +10,7 @@
   border-color: #e5e7eb;
 }
 
-/* QUITAR MARGEN */
+/* QUITAR MARGEN DE VARIOS ELEMENTOS*/
 body, h2, h1, p, a{
     margin: 0;
 }
